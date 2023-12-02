@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/World/Structures/Casa.tres" type="TileSet" id=1]
+
+[node name="Casa" type="StaticBody2D"]
+position = Vector2( 423, 196 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Layer1" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -393218, 0, 327683, -393217, 0, 327683, -458752, 0, 327683, -458751, 0, 327683, -458750, 0, 327683, -458749, 0, 262147, -327682, 0, 327683, -327681, 0, 327683, -393216, 0, 327683, -393215, 0, 524293, -393214, 0, 262151, -393213, 0, 262148, -262146, 0, 327683, -262145, 0, 327683, -327680, 0, 327683, -327679, 0, 524293, -327678, 0, 524295, -327677, 0, 327684, -196610, 0, 5, -196609, 0, 6, -262144, 0, 7, -262143, 0, 458752, -262142, 0, 458754, -262141, 0, 7, -131074, 0, 65540, -131073, 0, 131074, -196608, 0, 65542, -196607, 0, 5, -196606, 0, 7, -196605, 0, 65542, -65538, 0, 131076, -65537, 0, 196610, -131072, 0, 131078, -131071, 0, 65540, -131070, 0, 65542, -131069, 0, 131078, -65535, 0, 131076, -65534, 0, 131078 )
+
+[node name="Layer2" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -393218, 0, 393223, -458751, 0, 262149, -458750, 0, 262150, -327682, 0, 458759, -196609, 0, 524292, -196608, 0, 196611, -131072, 0, 196611 )
+
+[node name="Layer3" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -458749, 0, 262147, -327681, 0, 262147, -393213, 0, 262148, -131074, 0, 196608, -65538, 0, 196608 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -64, -32, -33, -32, -33, -52, 1, -52, 1, -32, 32, -32, 32, 1, 96, 1, 96, -33, 127, -33, 128, -157, -64, -157 )
