@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Player/AnimationSheet_Character.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Characters/Player/FiniteStateMachine.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Weapons/Sword.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Effects/slash_effect_anim_spritesheet.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Characters/Hitbox.gd" type="Script" id=7]
 
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 2 )
@@ -159,10 +160,10 @@ animations = [ {
 radius = 8.0
 height = 0.0
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=39]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/path = NodePath("Sprite/Hitbox/CollisionShape2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -171,48 +172,13 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -90.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 40.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../SlashSprite:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../SlashSprite:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=36]
 resource_name = "attack"
 length = 1.25
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -261,6 +227,22 @@ tracks/3/keys = {
 "update": 1,
 "values": [ 0, 1, 2 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/Hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="CapsuleShape2D" id=38]
+radius = 3.39366
+height = 19.4402
 
 [sub_resource type="Animation" id=12]
 resource_name = "Idle"
@@ -367,17 +349,28 @@ shape = SubResource( 35 )
 
 [node name="SwordAnimationPlayer" type="AnimationPlayer" parent="Sword" index="0"]
 root_node = NodePath("../Node2D")
-anims/RESET = SubResource( 37 )
+anims/RESET = SubResource( 39 )
 anims/attack = SubResource( 36 )
 
 [node name="Node2D" type="Node2D" parent="Sword" index="1"]
-rotation = -1.5708
+rotation = 2.0944
 
 [node name="Sprite" type="Sprite" parent="Sword/Node2D" index="0"]
 position = Vector2( 14, 5 )
-rotation = 0.698132
+rotation = 0.872665
 texture = ExtResource( 5 )
 offset = Vector2( 5, -4 )
+
+[node name="Hitbox" type="Area2D" parent="Sword/Node2D/Sprite" index="0"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword/Node2D/Sprite/Hitbox" index="0"]
+position = Vector2( 6.00513, -3.7334 )
+rotation = 0.785398
+shape = SubResource( 38 )
+disabled = true
 
 [node name="SlashSprite" type="Sprite" parent="Sword" index="2"]
 visible = false
@@ -385,7 +378,7 @@ position = Vector2( 32, 0 )
 scale = Vector2( 1.5, 1.7 )
 texture = ExtResource( 6 )
 hframes = 3
-frame = 1
+frame = 2
 
 [node name="AnimationPlayer" parent="." index="4"]
 anims/Idle = SubResource( 12 )
