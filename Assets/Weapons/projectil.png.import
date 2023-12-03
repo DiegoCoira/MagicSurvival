@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Magic Circle.png-90e82f528b260a487397532a67488ac9.stex"
+path="res://.import/projectil.png-40a61c6590a15d6fd2a47673686dcabc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/weapon/Magic Circle.png"
-dest_files=[ "res://.import/Magic Circle.png-90e82f528b260a487397532a67488ac9.stex" ]
+source_file="res://Assets/Weapons/projectil.png"
+dest_files=[ "res://.import/projectil.png-40a61c6590a15d6fd2a47673686dcabc.stex" ]
 
 [params]
 

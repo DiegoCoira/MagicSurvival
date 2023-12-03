@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slash_effect_anim_f2.png-dc075410688a7698fd2842427edc52e3.stex"
+path="res://.import/weapon_sword_1.png-74ea80f71fcd87f94102e47ebee70d1f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/weapon/slash_effect_anim_f2.png"
-dest_files=[ "res://.import/slash_effect_anim_f2.png-dc075410688a7698fd2842427edc52e3.stex" ]
+source_file="res://Assets/Weapons/weapon_sword_1.png"
+dest_files=[ "res://.import/weapon_sword_1.png-74ea80f71fcd87f94102e47ebee70d1f.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
