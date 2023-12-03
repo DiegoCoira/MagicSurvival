@@ -365,3 +365,19 @@ __meta__ = {
 }
 accerelation = 20
 max_speed = 50
+
+[node name="Mage2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 758, 60 )
+__meta__ = {
+"_edit_group_": true
+}
+accerelation = 20
+max_speed = 50
+
+[node name="Mage3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 461, 233 )
+__meta__ = {
+"_edit_group_": true
+}
+accerelation = 20
+max_speed = 50
