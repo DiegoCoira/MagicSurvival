@@ -238,6 +238,8 @@ tracks/1/keys = {
 
 [node name="Mage" instance=ExtResource( 2 )]
 script = ExtResource( 6 )
+accerelation = 20
+max_speed = 50
 
 [node name="FiniteStateMachine" parent="." index="0"]
 script = ExtResource( 3 )
