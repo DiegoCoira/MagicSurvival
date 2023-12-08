@@ -45,7 +45,7 @@ run/main_scene="res://Scenes/Cinematic/Cinematic.tscn"
 
 SceneTransitor="*res://Scenes/SceneChange/SceneTransitor.tscn"
 SaveData="*res://Scenes/Autoloads/SaveData.gd"
-EndCinematic="*res://Scenes/Cinematic/EndCinematic.tscn"
+EndCinematic="*res://Scenes/Cinematic/EndCinematic.gd"
 
 [display]
 

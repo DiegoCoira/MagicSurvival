@@ -30,7 +30,7 @@ texture_progress = ExtResource( 1 )
 z_index = 2
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 688, 1347 )
+position = Vector2( 690, 1323 )
 z_index = 1
 hp = 4
 

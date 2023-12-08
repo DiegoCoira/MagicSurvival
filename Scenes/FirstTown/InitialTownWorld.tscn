@@ -64,6 +64,7 @@ animations = [ {
 radius = 8.0
 
 [node name="WorldInitialTown" type="Node2D"]
+position = Vector2( 1448, 272 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource( 4 )
@@ -93,7 +94,6 @@ __meta__ = {
 [node name="CampFire" type="AnimatedSprite" parent="CampFire"]
 position = Vector2( 490, 420 )
 frames = SubResource( 13 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CampFire"]
@@ -111,7 +111,7 @@ __meta__ = {
 position = Vector2( 490, 387 )
 frames = SubResource( 11 )
 animation = "Sleeping"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Log"]

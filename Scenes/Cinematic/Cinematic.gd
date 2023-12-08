@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 onready var animation_player: AnimationPlayer = get_node("AnimationPlayer")
 onready var text: Label = get_node("TextBox/Text")

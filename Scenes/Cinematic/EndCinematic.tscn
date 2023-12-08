@@ -7,9 +7,24 @@
 size = 25
 font_data = ExtResource( 2 )
 
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextBox:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
 [sub_resource type="Animation" id=1]
-resource_name = "EndCinematic"
-length = 15.0
+resource_name = "end_cinematic"
+length = 10.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextBox:color")
@@ -18,7 +33,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 7 ),
+"times": PoolRealArray( 0, 5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
@@ -30,7 +45,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 8 ),
+"times": PoolRealArray( 6 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "Thanks for playing" ]
@@ -49,23 +64,21 @@ tracks/2/keys = {
 "method": "close_game"
 } ]
 }
-
-[sub_resource type="Animation" id=3]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("TextBox:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextBox:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
+"update": 1,
+"values": [ true ]
 }
 
-[node name="End" type="Control"]
+[node name="EndCinematic" type="Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -90,5 +103,5 @@ align = 1
 valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/EndCinematic = SubResource( 1 )
 anims/RESET = SubResource( 3 )
+anims/end_cinematic = SubResource( 1 )

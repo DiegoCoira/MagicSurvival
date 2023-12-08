@@ -119,6 +119,7 @@ height = 40.0
 
 [sub_resource type="Animation" id=16]
 resource_name = "dead"
+length = 1.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -174,20 +175,6 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "queue_free"
-} ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath(".")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
 "times": PoolRealArray( 1 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -281,21 +268,17 @@ height = 42.0
 
 [node name="Boss" instance=ExtResource( 2 )]
 script = ExtResource( 7 )
-hp = 13
-accerelation = 50
-max_speed = 120
+hp = 1
 
 [node name="FiniteStateMachine" parent="." index="0"]
 script = SubResource( 18 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 frames = SubResource( 13 )
-animation = "dead"
-frame = 3
+animation = "idle"
 
 [node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource( 14 )
-disabled = true
 
 [node name="AnimationPlayer" parent="." index="3"]
 anims/dead = SubResource( 16 )
