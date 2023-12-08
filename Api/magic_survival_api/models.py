@@ -5,14 +5,20 @@ from django.db import models
 
 class Dialogue(models.Model):
     name = models.CharField(max_length=30)
-    mensaje = models.CharField(max_length=255)
+    message = models.CharField(max_length=2200)
 
     def __str__(self):
         return self.personaje
 
+    def to_json(self):
+        return {"name": self.name, "message": self.message}
+
 
 class Player(models.Model):
-    hp = models.IntegerField(max_length=1)
+    hp = models.IntegerField()
 
     def __str__(self):
         return "Player_hp"
+
+    def to_json(self):
+        return {"hp": self.hp}
