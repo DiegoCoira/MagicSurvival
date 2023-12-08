@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from magic_survival_api import endpoints
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('magic_survival/change_hp', endpoints.change_player_hp),
+    path('magic_survival/get_dialogues', endpoints.get_dialogues)
 ]

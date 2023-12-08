@@ -8,7 +8,7 @@ class Dialogue(models.Model):
     message = models.CharField(max_length=2200)
 
     def __str__(self):
-        return self.personaje
+        return self.name
 
     def to_json(self):
         return {"name": self.name, "message": self.message}
