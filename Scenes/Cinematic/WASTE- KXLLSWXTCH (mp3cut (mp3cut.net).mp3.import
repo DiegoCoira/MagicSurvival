@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WASTE- KXLLSWXTCH (mp3cut (mp3cut.net).mp3-6b60344f5927049ca21fa9a7e23f5d88.mp3str"
+
+[deps]
+
+source_file="res://Scenes/Cinematic/WASTE- KXLLSWXTCH (mp3cut (mp3cut.net).mp3"
+dest_files=[ "res://.import/WASTE- KXLLSWXTCH (mp3cut (mp3cut.net).mp3-6b60344f5927049ca21fa9a7e23f5d88.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

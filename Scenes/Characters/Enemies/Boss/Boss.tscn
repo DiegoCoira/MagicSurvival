@@ -181,6 +181,20 @@ tracks/4/keys = {
 "method": "queue_free"
 } ]
 }
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "end_game"
+} ]
+}
 
 [sub_resource type="Animation" id=19]
 resource_name = "hurt"
@@ -276,10 +290,12 @@ script = SubResource( 18 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 frames = SubResource( 13 )
-animation = "idle"
+animation = "dead"
+frame = 3
 
 [node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource( 14 )
+disabled = true
 
 [node name="AnimationPlayer" parent="." index="3"]
 anims/dead = SubResource( 16 )

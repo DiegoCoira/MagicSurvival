@@ -39,12 +39,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Magic Survival"
-run/main_scene="res://Scenes/StartMenu/Menu.tscn"
+run/main_scene="res://Scenes/Cinematic/Cinematic.tscn"
 
 [autoload]
 
 SceneTransitor="*res://Scenes/SceneChange/SceneTransitor.tscn"
 SaveData="*res://Scenes/Autoloads/SaveData.gd"
+EndCinematic="*res://Scenes/Cinematic/EndCinematic.tscn"
 
 [display]
 

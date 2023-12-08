@@ -8,11 +8,7 @@
 size = 60
 font_data = ExtResource( 2 )
 
-[node name="Menu" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -1.0
-margin_bottom = -1.0
+[node name="Menu" type="CanvasLayer"]
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
