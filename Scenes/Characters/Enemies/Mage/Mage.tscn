@@ -237,6 +237,7 @@ tracks/1/keys = {
 }
 
 [node name="Mage" instance=ExtResource( 2 )]
+z_index = 1
 script = ExtResource( 6 )
 accerelation = 20
 max_speed = 50
@@ -246,7 +247,8 @@ script = ExtResource( 3 )
 
 [node name="AnimatedSprite" parent="." index="1"]
 frames = SubResource( 9 )
-frame = 7
+animation = "dead"
+frame = 3
 
 [node name="CollisionShape2D" parent="." index="2"]
 position = Vector2( 0, 10 )

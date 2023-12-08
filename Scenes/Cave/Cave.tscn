@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/FirstTown/FirstTown.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Tilesets/Structures/base_out_atlas.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Cave/Cave.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/SceneChange/SceneChangeArea.tscn" type="PackedScene" id=4]
 
 [sub_resource type="TileSet" id=1]
 0/name = "base_out_atlas.png 0"
@@ -173,6 +174,9 @@ __meta__ = {
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="ForthPlayerDetector"]
 position = Vector2( -240, -512 )
 shape = SubResource( 2 )
+
+[node name="SceneChangeArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 80, -72 )
 
 [connection signal="body_entered" from="FirstPlayerDetector" to="." method="_on_FirstPlayerDetector_body_entered"]
 [connection signal="body_entered" from="SecondPlayerDetector" to="." method="_on_SecondPlayerDetector_body_entered"]

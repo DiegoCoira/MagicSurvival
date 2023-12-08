@@ -44,6 +44,7 @@ run/main_scene="res://Scenes/FirstTown/InitialTownWorld.tscn"
 [autoload]
 
 SceneTransitor="*res://Scenes/SceneChange/SceneTransitor.tscn"
+SaveData="*res://Scenes/Autoloads/SaveData.gd"
 
 [display]
 
