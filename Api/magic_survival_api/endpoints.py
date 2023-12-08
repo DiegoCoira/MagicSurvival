@@ -8,13 +8,13 @@ from .models import Dialogue, Player
 
 
 @csrf_exempt
-def change_player_hp(request):
+def change_player_hp(request, ):
     if request.method == 'POST':
         try:
             body_json = json.loads(request.body)
             jugador = get_object_or_404(Player, id=1)
 
-            jugador.hp -= body_json.get('hp', 0)  # Asegurándote de manejar el caso donde 'hp' no está en el cuerpo JSON
+            jugador.hp == int(body_json.get('new_hp_value', 0))
 
             jugador.save()
             response_data = {'nueva_hp': jugador.hp}
@@ -41,7 +41,7 @@ def get_dialogues(request):
         try:
             dialogues = Dialogue.objects.all()
             response_data = [dialogue.to_json() for dialogue in dialogues]
-            return JsonResponse(response_data, status=200)
+            return JsonResponse(response_data, status=200, safe=False)
         except Player.DoesNotExist:
             JsonResponse({'error': 'PlayerNotFound'}, status=404)
     else:

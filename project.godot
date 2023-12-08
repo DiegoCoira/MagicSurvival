@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Magic Survival"
-run/main_scene="res://Scenes/FirstTown/InitialTownWorld.tscn"
+run/main_scene="res://Scenes/StartMenu/Menu.tscn"
 
 [autoload]
 

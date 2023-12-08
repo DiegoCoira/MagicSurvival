@@ -387,7 +387,6 @@ tracks/2/keys = {
 collision_layer = 2
 collision_mask = 5
 script = ExtResource( 3 )
-max_hp = null
 
 [node name="FiniteStateMachine" parent="." index="0"]
 script = ExtResource( 4 )
@@ -442,3 +441,7 @@ anims/hurt = SubResource( 40 )
 [node name="Camera2D" type="Camera2D" parent="." index="5"]
 current = true
 zoom = Vector2( 0.7, 0.7 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." index="6"]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
